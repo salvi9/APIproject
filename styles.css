@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+button a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+button a:visited {
+  color: #ffffff;
+}
+
+button:hover {
+  background-color: #f3bb66;
+}
+
+.heading-container {
+  background-color: #fe5b34;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 40vh;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.header-items {
+  padding-top: 5%;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.header-items h1 {
+  font-size: 6rem;
+}
+
+.more-info {
+  margin: 0 auto;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  width: 80%;
+}
+
+.more-info h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.item-details {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+}
+
+.with-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.icons {
+  margin-right: 1rem;
+}
+
+#container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.searchButton {
+  background-color: #fe5b34;
+  color: #ffffff;
+  padding: 0.7rem 2rem;
+}
+
+#container h3 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.search-info {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.search-info input {
+  height: 40px;
+  padding: 1rem 0.5rem;
+  width: 50%;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+#recipe-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.recipe {
+  max-width: 250px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.recipe-img img {
+  border-radius: 8px;
+}
+
+.recipe a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.recipe a:hover {
+  text-decoration: underline;
+}
