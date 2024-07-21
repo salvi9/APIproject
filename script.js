@@ -29,19 +29,23 @@ const loadRecipes = (recipeList = []) => {
       label: recipeTitle,
       ingredientLines,
       image: recipeImage,
+      uri: recipeUri,
     } = recipeObj.recipe;
+
+    const recipeId = encodeURIComponent(recipeUri.split("#recipe_")[1]);
+
     const htmlStr = `
-        <div class="recipe">
-            <div class="title-container">
-                <a href="#">
-                <div class="recipe-img">
-                    <img src=${recipeImage}>
-                </div>
-                <div class="recipe-title"><h4>${recipeTitle}</h4></div>
-                </a>
+      <div class="recipe">
+        <div class="title-container">
+          <a href="/details.html?id=${recipeId}">
+            <div class="recipe-img">
+              <img src=${recipeImage}>
             </div>
+            <div class="recipe-title"><h4>${recipeTitle}</h4></div>
+          </a>
         </div>
-        `;
+      </div>
+    `;
     recipeContainer.insertAdjacentHTML("beforeend", htmlStr);
   });
 };
