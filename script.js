@@ -37,7 +37,7 @@ const loadRecipes = (recipeList = []) => {
     const htmlStr = `
       <div class="recipe">
         <div class="title-container">
-          <a href="/details.html?id=${recipeId}">
+          <a href="details.html?id=${recipeId}">
             <div class="recipe-img">
               <img src=${recipeImage}>
             </div>
