@@ -4,6 +4,7 @@ const baseUrl = `https://api.edamam.com/api/recipes/v2?type=public&app_id=${appI
 const recipeContainer = document.querySelector("#recipe-container");
 const userSearch = document.querySelector("#userSearch");
 const btnSearch = document.querySelector(".searchButton");
+const loadingMessage = document.querySelector("#loadingMessage");
 
 btnSearch.addEventListener("click", (e) => {
   const userValue = userSearch.value;
@@ -12,10 +13,12 @@ btnSearch.addEventListener("click", (e) => {
 
 function renderRecipe(type = "beef") {
   const url = baseUrl + `&q=${type}`;
+  loadingMessage.style.display = "block";
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
       loadRecipes(data.hits);
+      loadingMessage.style.display = "none";
     })
     .catch((error) => console.log(error));
 }
@@ -39,7 +42,7 @@ const loadRecipes = (recipeList = []) => {
         <div class="title-container">
           <a href="/APIproject/details.html?id=${recipeId}">
             <div class="recipe-img">
-              <img src=${recipeImage}>
+              <img src=${recipeImage} loading="lazy">
             </div>
             <div class="recipe-title"><h4>${recipeTitle}</h4></div>
           </a>
@@ -49,16 +52,3 @@ const loadRecipes = (recipeList = []) => {
     recipeContainer.insertAdjacentHTML("beforeend", htmlStr);
   });
 };
-
-{
-  /* <div class="recipe-text">
-                <ul>
-                    ${ingredientLines
-                      .map(
-                        (ingredient) =>
-                          `<li  class="list-style">${ingredient}</li>`
-                      )
-                      .join("")}
-                </ul>
-            </div> */
-}

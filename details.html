@@ -10,14 +10,70 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="details.js" defer></script>
     <title>Recipe Dive Details</title>
   </head>
 
   <body>
     <header class="heading-container">
-      <h1>Recipe Details</h1>
+      <div class="header-items">
+        <h1>Recipe Details</h1>
+        <div>
+          <h2>Deep Dive into the Details of our Recipe!</h2>
+          <p>
+            Discover a range of delicious recipes using ingredients you already
+            have on hand.
+          </p>
+        </div>
+      </div>
     </header>
+    <section id="tips-container">
+      <h2>Helpful Tips</h2>
+      <div id="tips">
+        <div class="tips-details">
+          <h3>Read the Recipe Thoroughly</h3>
+          <p>
+            Take a few minutes to read through the entire recipe from start to
+            finish. This helps you understand the preparation steps, cooking
+            techniques, and any special equipment or ingredients required.
+          </p>
+        </div>
+        <div class="tips-details">
+          <h3>Gather and Measure Ingredients</h3>
+          <p>
+            Collect all ingredients listed in the recipe and measure them out.
+            Having everything ready before you start cooking makes the process
+            smoother and prevents missing ingredients or steps.
+          </p>
+        </div>
+        <div class="tips-details">
+          <h3>Follow Instructions Precisely</h3>
+          <p>
+            Follow each step of the recipe in the given order. Pay attention to
+            specific instructions on cooking times, temperatures, and methods to
+            ensure the dish turns out as intended.
+          </p>
+        </div>
+        <div class="tips-details">
+          <h3>Adjust to Taste and Serve</h3>
+          <p>
+            Taste the dish as it cooks and adjust seasonings or ingredients to
+            your preference. Once the recipe is complete, plate the food and
+            enjoy your homemade meal.
+          </p>
+        </div>
+      </div>
+    </section>
+    <div id="loadingMessage" class="loading-message" style="display: none">
+      Loading...
+    </div>
     <section id="recipe-details-container"></section>
+    <footer>
+      <p>© 2024 Recipe Dive</p>
+    </footer>
   </body>
 </html>

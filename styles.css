@@ -35,15 +35,13 @@ button:hover {
 .heading-container {
   background-color: #fe5b34;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 40vh;
   color: #ffffff;
   margin-bottom: 1rem;
+  padding: 1rem 0;
 }
 
 .header-items {
-  padding-top: 5%;
+  padding: 2rem 0;
   margin: 0 auto;
   width: 80%;
 }
@@ -136,4 +134,74 @@ h4 {
 
 .recipe a:hover {
   text-decoration: underline;
+}
+
+.loading-message {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  margin: 20px 0;
+}
+
+.recipe-details {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.recipe-details h2 {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #fe5b34;
+}
+
+.recipe-details ul {
+  list-style: none;
+}
+
+#details-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+
+#images img {
+  border-radius: 8px;
+}
+
+#details {
+  background-color: #f3bb66;
+  padding: 1.5rem 1rem;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #fe5b34;
+  padding: 1rem 0.5rem;
+  margin-top: 2.5rem;
+}
+
+footer p {
+  margin: 0 auto;
+  width: 80%;
+}
+
+#tips {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+#tips-container h2 {
+  text-align: center;
+  font-size: 1.7rem;
+  color: #f3bb66;
+}
+
+#tips-container {
+  width: 80%;
+  margin: 4rem auto;
+}
+
+.tips-details {
+  padding: 1rem;
 }

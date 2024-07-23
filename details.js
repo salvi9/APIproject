@@ -1,6 +1,7 @@
 const apiKey = "e17d8736d2530500fa57de9f4e20a015";
 const appId = "68110ced";
 const baseUrl = `https://api.edamam.com/api/recipes/v2`;
+const loadingMessage = document.querySelector("#loadingMessage");
 
 const recipeDetailsContainer = document.querySelector(
   "#recipe-details-container"
@@ -18,12 +19,14 @@ window.addEventListener("DOMContentLoaded", async () => {
 
 async function fetchRecipeDetails(id) {
   const url = `${baseUrl}/${id}?type=public&app_id=${appId}&app_key=${apiKey}`;
-
+  loadingMessage.style.display = "block";
   try {
     const response = await fetch(url);
     const data = await response.json();
+
     if (data) {
       displayRecipeDetails(data.recipe);
+      loadingMessage.style.display = "none";
       return data.recipe;
     } else {
       console.log("No recipe details found.");
@@ -49,7 +52,9 @@ function displayRecipeDetails(recipe) {
   const htmlStr = `
     <div class="recipe-details">
       <h2>${recipeTitle}</h2>
-      <img src="${recipeImage}" alt="${recipeTitle}">
+      <div id="details-container">
+      <div id="images"><img src="${recipeImage}" alt="${recipeTitle}" loading="lazy"></div>
+      <div id="details">
       <p><strong>Calories:</strong> ${calories.toFixed(2)}</p>
       <p><strong>Total Time:</strong> ${totalTime} minutes</p>
       <p><strong>Cuisine Type:</strong> ${cuisineType.join(", ")}</p>
@@ -60,6 +65,10 @@ function displayRecipeDetails(recipe) {
           .map((ingredient) => `<li>${ingredient}</li>`)
           .join("")}
       </ul>
+      </div>
+      </div>
+      
+      
     </div>
   `;
 
